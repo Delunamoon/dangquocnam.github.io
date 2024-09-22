@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặng Quốc Năm k48D</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .menu {
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .content {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Đặng Quốc Năm k48D</h1>
+    <div class="menu">
+        <button onclick="showContent('journey')">Hành trình học web</button>
+        <button onclick="showContent('websites')">Các trang web</button>
+        <button onclick="showContent('hometown')">Mảnh đất quê hương em Hà Tĩnh</button>
+    </div>
+
+    <div id="journey" class="content">
+        <h2>Hành trình học web</h2>
+        <h3><button onclick="showContent('js_html_css')">Có kiến thức về JavaScript, HTML, CSS</button></h3>
+        <h3><button onclick="showContent('front_end')">Nắm được kỹ năng về Front-end ở mức cơ bản</button></h3>
+        <button onclick="goBack()">Quay lại</button>
+    </div>
+
+    <div id="js_html_css" class="content">
+        <h2>Có kiến thức về JavaScript, HTML, CSS</h2>
+        <p>Cần phải có kiến thức cơ bản về JavaScript, HTML và CSS,để có thể xây dựng các trang web tĩnh và động.</p>
+        <button onclick="goBack()">Quay lại</button>
+    </div>
+
+    <div id="front_end" class="content">
+        <h2>Nắm được kỹ năng về Front-end ở mức cơ bản</h2>
+        <p>Nắm được các kỹ năng cơ bản về Front-end như sử dụng các framework, thư viện và công cụ phát triển web hiện đại.</p>
+        <button onclick="goBack()">Quay lại</button>
+    </div>
+
+    <div id="websites" class="content">
+        <h2>Các trang web</h2>
+        <h3><button onclick="showContent('w3schools')">w3schools.com</button></h3>
+        <h3><button onclick="showContent('youtube')">youtube.com</button></h3>
+        <button onclick="goBack()">Quay lại</button>
+    </div>
+
+    <div id="w3schools" class="content">
+        <h2>w3schools.com</h2>
+        <p>W3Schools là một trang web học lập trình và phát triển web. Nó cung cấp các bài học và tài liệu chi tiết về HTML, CSS, JavaScript, và nhiều ngôn ngữ lập trình khác.</p>
+        <button onclick="goBack()">Quay lại</button>
+    </div>
+
+    <div id="youtube" class="content">
+        <h2>youtube.com</h2>
+        <p>YouTube là một nền tảng chia sẻ video lớn nhất thế giới, nơi người dùng có thể tải lên, chia sẻ và xem video.</p>
+        <button onclick="goBack()">Quay lại</button>
+    </div>
+
+    <div id="hometown" class="content">
+        <h2>Mảnh đất quê hương em Hà Tĩnh</h2>
+        <h3><button onclick="showContent('geography')">Vị trí địa lý</button></h3>
+        <h3><button onclick="showContent('specialty')">Đặc sản nơi đây</button></h3>
+        <button onclick="goBack()">Quay lại</button>
+    </div>
+
+    <div id="geography" class="content">
+        <h2>Vị trí địa lý</h2>
+        <p>
+            Hà Tĩnh là một tỉnh nằm ở miền Trung Việt Nam, phía Bắc giáp tỉnh Nghệ An, phía Nam giáp tỉnh Quảng Bình, phía Đông giáp biển Đông và phía Tây giáp Lào. 
+            Tỉnh có diện tích khoảng 6.054 km² và có đường bờ biển dài khoảng 137 km. 
+            Hà Tĩnh nổi bật với địa hình đồi núi, hệ thống sông ngòi phong phú và khí hậu nhiệt đới gió mùa.
+        </p>
+        <button onclick="goBack()">Quay lại</button>
+    </div>
+
+    <div id="specialty" class="content">
+        <h2>Đặc sản nơi đây</h2>
+        <h3>Món cu đơ</h3>
+        <p>
+            Kẹo Cu Đơ là một loại kẹo đặc sản có nguồn gốc từ tỉnh Hà Tĩnh,
+            Kẹo được nấu từ mật mía, đường, mạch nha, gừng, đậu phộng làm nhân và được đổ vào hai miếng bánh tráng ép lại.
+            Loại kẹo này rất dẻo và dính, có thể ăn không hoặc thưởng thức cùng với nước trà xanh.
+        </p>
+        <button onclick="goBack()">Quay lại</button>
+    </div>
+
+    <script>
+        function showContent(id) {
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => content.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+        }
+
+        function goBack() {
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => content.style.display = 'none');
+        }
+    </script>
+</body>
+</html>
